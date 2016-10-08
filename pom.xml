@@ -20,13 +20,7 @@
     <groupId>org.heller</groupId>
     <artifactId>axon3poc</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Axon3 POC</name>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.1.RELEASE</version>
-    </parent>
+    <name>Axon3_POC</name>
 
     <modules>
         <module>main</module>
@@ -60,14 +54,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.4.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>1.4.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>1.4.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
@@ -79,6 +76,7 @@
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <scope>runtime</scope>
+            <version>2.3.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.axonframework/axon-core -->
@@ -189,4 +187,3 @@
     </pluginRepositories>
 
 </project>
-        Contact GitHub
