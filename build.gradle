@@ -3,7 +3,6 @@ plugins {
 
 }
 
-
 group 'org.heller'
 version '1.0-SNAPSHOT'
 
@@ -19,7 +18,6 @@ sonarqube {
         property "sonar.jacoco.itReportPath", "build/test-results"
     }
 }
-
 
 
 // ================================== Shared Configs ======================================
