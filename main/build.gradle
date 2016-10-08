@@ -1,0 +1,20 @@
+group 'org.heller'
+version '1.0-SNAPSHOT'
+
+
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.axonframework/axon-core
+    compile group: 'org.axonframework', name: 'axon-core', version: '3.0-M4'
+
+    // https://mvnrepository.com/artifact/org.axonframework/axon-spring
+    compile group: 'org.axonframework', name: 'axon-spring', version: '3.0-M4'
+
+    // https://mvnrepository.com/artifact/org.axonframework/axon-mongo
+    compile group: 'org.axonframework', name: 'axon-mongo', version: '3.0-M4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    // https://mvnrepository.com/artifact/org.axonframework/axon-test
+    testCompile group: 'org.axonframework', name: 'axon-test', version: '3.0-M4'
+}

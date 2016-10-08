@@ -1,0 +1,58 @@
+plugins {
+    id "org.sonarqube" version "2.0.1"
+
+}
+
+
+group 'org.heller'
+version '1.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$GradleVersion-all.zip"
+}
+
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.jacoco.reportPath", "build/test-results"
+        property "sonar.jacoco.itReportPath", "build/test-results"
+    }
+}
+
+
+
+// ================================== Shared Configs ======================================
+
+subprojects {
+    apply plugin: "java"
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'jacoco'
+    jacoco {
+        toolVersion = "0.7.6.201602180812"
+        reportsDir = file("$buildDir/JacocoReportDir")
+    }
+
+//    sonarqube {
+//        properties {
+//            property "sonar.sources", "src/main"
+//            property "sonar.tests", "src/test"
+//        }
+//    }
+//
+//    configurations.all {
+//
+//        ResolutionStrategy.cacheDynamicVersionsFor(1,'minutes')
+//
+//    }
+
+
+    dependencies{
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
